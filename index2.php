@@ -1,3 +1,20 @@
+<?php 
+
+session_start();
+
+if(isset($_SESSION['usuario'])){
+    echo '
+    <script>
+    alert("Por favor debes iniciar sesion");
+    window.location = "index.php";
+    </script>
+    ';
+    session_destroy();
+    die();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +28,10 @@
 
     <header class="header">
         <div class="cont">
-            <a class="logo" href="index.html">
+            <a class="logo" href="index.php">
                 <h1 class="logo">Hazlo <span>tu</span></h1>
             </a>
+            <a href="php/cerrar_sesion.php">Cerrar sesion</a>
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="32" 
              height="32" viewBox="0 0 24 24" 
              stroke-width="1.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
