@@ -13,11 +13,6 @@ body {
 }
 
 /** Globales **/
-.cont {
-    max-width: 120rem;
-    width: 90%;
-    margin: 0 auto;
-}
 a {
     text-decoration: none;
 }
@@ -25,11 +20,26 @@ h1 {
     font-size: 2rem;
 }
 h2 {
+    font-size: 1.8rem;
 }
 h3 {
+    font-size: 1.5rem;
 }
 h4 {
+    font-size: 1.2rem;
 }
 h5{
+    font-size: 1rem;
 }
+
+/** Header**/
+.cont {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+.header {
+
+}
+
 

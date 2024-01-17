@@ -29,7 +29,7 @@ if(isset($_SESSION['usuario'])){
     <header class="header">
         <div class="cont">
             <a class="logo" href="index.php">
-                <h1 class="logo">Hazlo <span>tu</span></h1>
+                <h1 class="logo">Hazlo <span class="logo-span">tu</span></h1>
             </a>
             <a href="php/cerrar_sesion.php">Cerrar sesion</a>
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="32" 
@@ -57,11 +57,12 @@ if(isset($_SESSION['usuario'])){
         </div>
         
     </header>
-    <main>
-        <h3>¿Tu CV no es suficiente? ¿Estancado en tu   
-            desarrollo de  personaje?
-       </h3>       
-    </main>
+        <main>
+            <h3>
+                ¿Tu CV no es suficiente? ¿Estancado en tu   
+                desarrollo de  personaje?
+            </h3>       
+        </main>
     <section>
 
     </section>
