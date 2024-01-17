@@ -1,0 +1,35 @@
+
+hmtl {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10 px */
+}
+*,*::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/** Globales **/
+.cont {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+h1 {  
+    font-size: 2rem;
+}
+h2 {
+}
+h3 {
+}
+h4 {
+}
+h5{
+}
+
