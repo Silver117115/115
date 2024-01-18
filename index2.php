@@ -64,13 +64,6 @@ if(isset($_SESSION['usuario'])){
                 desarrollo de  personaje?
             </h3>       
         </main>
-    <section>
-
-    <main>
-        <h3>¿Tu CV no es suficiente? ¿Estancado en tu   
-            desarrollo de  personaje?
-       </h3>       
-    </main>
 
     <div class="body_page">
         <div class="cover"></div>
