@@ -1,13 +1,3 @@
-<?php 
-
-session_start();
-
-if(isset($_SESSION['usuario'])){
-    header("location: ../index2.php");
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="es-es">
 <head>
@@ -36,7 +26,7 @@ if(isset($_SESSION['usuario'])){
 
         <div class="contenedor__login-register">
 
-            <form action="index2.php" method="POST" class="formulario__login">
+            <form action="php/login.php" method="POST" class="formulario__login">
 
                 <h2>Iniciar Sesion</h2>
                 <input type="text" placeholder="Correo Electronico" name="correo">

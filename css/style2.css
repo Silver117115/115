@@ -2,52 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 62.5%; /* 1 rem = 10 px */
 }
-*,*::before, *::after {
-    box-sizing: inherit;
-}
-body {
-    font-family: sans-serif;
-    font-size: 1.6rem;
-    line-height: 2;
-}
-
-/** Globales **/
-a {
-    text-decoration: none;
-}
-h1 {  
-    font-size: 2rem;
-}
-h2 {
-    font-size: 1.8rem;
-}
-h3 {
-    font-size: 1.5rem;
-}
-h4 {
-    font-size: 1.2rem;
-}
-h5{
-    font-size: 1rem;
-}
-
-/** Header**/
-.cont {
-    max-width: 120rem;
-    width: 90%;
-    margin: 0 auto;
-}
-.header {
-
-}
-
-a {
-    text-decoration: none;
-    font-family: sans-serif;
-}
-
 
 .footer{
     width: 100%;
