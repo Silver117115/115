@@ -47,7 +47,7 @@ if(isset($_SESSION['usuario'])){
     <div class="menu__side" id="menu_side">
         <div class="name__page">
             <i class="fab fa-youtube"></i>
-            <h4>Aprende tu</h4>
+            <h4>Aprende tú</h4>
         </div>
         <div class="option__menu">
             <a href="#" class="selected">
