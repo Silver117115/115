@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/
-    css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
 <body >
-    <section> 
-    <form>
+    <section>
 
         <h2>Apartado para Estudiantes</h2>
     <div>
@@ -20,12 +18,12 @@
     <div class="contenedor__todo">
     <h1>Mandanos tus comentarios</h1> 
     <br>
-    <form action="php/quejas.php" method="POST">
+    <form class="" action="php/quejas.php" method="POST">
 
     <textarea class="input-text"></textarea>
     <button id="enviar_queja">Enviar</button>
-    </div>
     </form>
+    </div>
     </section>
 
     <!--Post send dates -->
