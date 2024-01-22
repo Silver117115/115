@@ -1,34 +1,23 @@
-document.getElementById("btn_open").addEventListener("click", open_close_menu);
+const body = document.querySelector('body'),
+sidebar = body.querySelector('nav'),
+toogle = body.querySelector(".toogle"),
+searchBtn = body.querySelector(".search-box"),
+modeSwitch = body.querySelector(".toogle-switch"),
+modeText = body.querySelector(".mode-text");
 
-var side_menu = document.getElementById("menu_side");
-var btn_open =document.getElementById("btn_open");
-var body = document.getElementById("body");
+toogle.addEventListener("click", () => {
+    sidebar.classList.toggle("close");
+})
 
-function open_close_menu(){
-    body.classList.toggle("body_move");
-    side_menu.classList.toggle("menu__side_move");
-}
+searchBtn.addEventListener("click", () => {
+    sidebar.classList.remove("close");
+})
 
-if (window.innerWidth < 760){
-
-    body.classList.add("body_move");
-    side_menu.classList.add("menu__side_move");
-}
-
-//Haciendo el menú responsive(adaptable)
-
-window.addEventListener("resize", function(){
-
-    if (window.innerWidth > 760){
-
-        body.classList.remove("body_move");
-        side_menu.classList.remove("menu__side_move");
+modeSwitch.addEventListener("click", () =>{
+    body.classList.toggle("dark");
+    if (body.classList.contains("dark")) {
+        modeText.innerText = "Ligth mode"
+    } else {
+        modeText.innerText = "Dark mode"
     }
-
-    if (window.innerWidth < 760){
-
-        body.classList.add("body_move");
-        side_menu.classList.add("menu__side_move");
-    }
-
-});
+})
