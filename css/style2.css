@@ -283,6 +283,7 @@ body.dark .switch::before {
 }
 
 .home {
+    margin-left: 30px;
     position: absolute;
     top: 0;
     left: 250px;
@@ -382,4 +383,4 @@ body.dark .home .text {
     height: 1px;
     background-color: #7a7a7a;
  }
-
+  

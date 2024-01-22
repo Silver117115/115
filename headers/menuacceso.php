@@ -35,7 +35,7 @@
                     <li class="nav-link">
                         <a href="#">
                             <i class="bx bx-bar-chart-alt-2 icon"></i>
-                            <span class="text nav-text">Ganancia</span>
+                            <span class="text nav-text">Estadístca</span>
                         </a>
                     </li>
                     <li class="nav-link">
@@ -47,7 +47,7 @@
                     <li class="nav-link">
                         <a href="#">
                             <i class="bx bx-pie-chart-alt icon"></i>
-                            <span class="text nav-text">Analiticas</span>
+                            <span class="text nav-text">Analíticas</span>
                         </a>
                     </li>
                     <li class="nav-link">
@@ -87,11 +87,16 @@
     </nav>
 
     <section class="home">
+    <nav>
+        <a class="" href="#">Registrate</a>
+        <a class="" href="#">¿Quieres saber más?</a>
+        <a class="" href="#"></a>
+    </nav>
         <div class="text">
             Dashboard
         </div>
+        <?php include "footer/footer.php"; ?>
     </section>
     <script src="scripts\scripts_index-2.js"></script>
-    
 </body>
 </html>
