@@ -1,46 +1,97 @@
-<div class="menu__side" id="menu_side">
-    <div class="name__page">
-        <i class="fab fa-youtube"></i>
-        <h4>Aprende tu</h4>
-    </div>
-    <div class="option__menu">
-        <a href="#" class="selected">
-    
-            <div class="option">
-                <i class="fas fa-home" title="Inicio"></i>
-                <h4>Inicio</h4>
-            </div>
-        </a>
-        <a href="#">
-            <div class="option">
-                <i class="far fa-file" title="Portafolio"></i>
-                <h4>Portafolio</h4>
-            </div>
-        </a>
-        <a href="#">
-            <div class="option">
-                <i class="fas fa-video" title="Cursos"></i>
-                <h4>Cursos</h4>
-            </div>
-        </a>
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
 
-        <a href="#">
-            <div class="option">
-                <i class="far fa-sticky-note" title="Blog"></i>
-                <h4>Blog</h4>
+<link rel="stylesheet" href="css/style2.css">
+
+<nav class="sidebar close">
+        <header>
+            <div class="text logo">
+                <span class="name">Aprende Tu</span>
+                <span class="profe">Desarrollando ideas</span>
             </div>
-        </a>
-        <a href="#">
-            <div class="option">
-                <i class="far fa-id-badge" title="Contacto"></i>
-                <h4>Contacto</h4>
+            <i class="bx bx-menu toogle"></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class="bx bx-search icon"></i>
+                    <input type="text" placeholder="Buscar...">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="bx bx-home-alt icon"></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="bx bx-bar-chart-alt-2 icon"></i>
+                            <span class="text nav-text">Ganancia</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="bx bx-bell icon"></i>
+                            <span class="text nav-text">Notificaciones</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="bx bx-pie-chart-alt icon"></i>
+                            <span class="text nav-text">Analiticas</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="bx bx-heart icon"></i>
+                            <span class="text nav-text">Reacciones</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="bx bx-wallet icon"></i>
+                            <span class="text nav-text">Cartera</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </a>
-        <a href="#">
-            <div class="option">
-                <i class="far fa-address-card" title="Nosotros"></i>
-                <h4>Nosotros</h4>
+            <div class="bottom-content">
+                <li class="">
+                <a href="php/cerrar_sesion.php">
+                        <i class="bx bx-log-out icon"></i>
+                        <span class="text nav-text">Salir</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class="bx bx-moon icon moon"></i>
+                        <i class="bx bx-sun icon sun"></i>
+                    </div>
+                    <span class="mode-text text">Modo oscuro</span>
+                    <div class="toogle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+
             </div>
-        </a>
-    </div>
-</div>
+        </div>
+    </nav>
+
+    <section class="home">
+        <div class="text">
+            Dashboard
+        </div>
+    </section>
+    <script src="scripts\scripts_index-2.js"></script>
+    
+</body>
+</html>

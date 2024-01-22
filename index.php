@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<?php include "headers/menuacceso.php"; ?>
+
    <main>
     <div class="contenedor__todo">
 
