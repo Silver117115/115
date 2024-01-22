@@ -5,13 +5,13 @@ include 'conexion_be.php';
 $nombre_completo = $_POST['nombre_completo'];
 $correo = $_POST['correo'];
 $usuario = $_POST['usuario'];
-$contraseña = $_POST['contraseña'];
+$contrasena = $_POST['contrasena'];
 
 //Encriptamiento de contraseña
-$contraseña = hash('sha512', $contraseña);
+$contrasena = hash('sha512', $contrasena);
 
-$query = "INSERT INTO usuarios(nombre_completo, correo, usuario, contraseña) 
-VALUES('$nombre_completo', '$correo', '$usuario', '$contraseña')";
+$query = "INSERT INTO usuarios(nombre_completo, correo, usuario, contrasena) 
+VALUES('$nombre_completo', '$correo', '$usuario', '$contrasena')";
 
 //Verificar que el correo no se repita en la base de datos
 
