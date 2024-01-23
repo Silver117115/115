@@ -88,9 +88,9 @@
 
     <section class="home">
     <nav>
-        <a class="" href="#">Registrate</a>
-        <a class="" href="#">¿Quieres saber más?</a>
-        <a class="" href="#"></a>
+        <a class="home__nav" href="#">Registrate</a>
+        <a class="home__nav" href="#">¿Quieres saber más?</a>
+        <a class="home__nav" href="#">Aprende a Aprender</a>
     </nav>
         <div class="text">
             Dashboard

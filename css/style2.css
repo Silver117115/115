@@ -383,4 +383,6 @@ body.dark .home .text {
     height: 1px;
     background-color: #7a7a7a;
  }
-  
+ .home__nav {
+    text-decoration: none;
+ }
