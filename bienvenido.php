@@ -24,17 +24,6 @@ if(isset($_SESSION['usuario'])){
 <?php include "headers/menuacceso.php"; ?>
 
 <body id="body">
-
-    <header class="header">
-        <div class="icon_menu">
-            <i class="fas fa-bars" id="btn_open"></i>
-        </div>
-        <div class="cont">
-            <a class="logo" href="index.php"></a>          
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>   
-    </header>
-   
-    <script src="scripts\scripts_index-2.js"></script>
+    
 </body>
 </html>

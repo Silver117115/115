@@ -33,9 +33,9 @@
         </div>
         <div class="box_footer">
             <h2>Redes sociales</h2>
-            <a href="#"><i class="fab fa-facebook-square"></i>Facebook</a>
-            <a href="#"><i class="fa-brands fa-square-x-twitter"></i>X</i></a>
-            <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+            <a href="#"><i class='bx bxl-facebook-circle'></i>Facebook</a>
+            <a href="#"><i class='bx bxl-twitter' ></i>Twitter</a>
+            <a href="#"><i class='bx bxl-instagram' ></i>Instagram</a>
         </div>
     </div>
 

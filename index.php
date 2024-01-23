@@ -35,14 +35,14 @@ if (isset($_SESSION['usuario'])){
 
         <div class="contenedor__login-register">
 
-            <form action="php/login.php" method="POST" class="formulario__login">
+            <form action="php/login.php" method="post" class="formulario__login">
                 <h2>Iniciar Sesion</h2>
                 <input type="text" placeholder="Correo Electronico" name="correo">
                 <input type="password" placeholder="Contraseña" name="contasena">
-                <button>Entrar</button>
+                <button class="btningresar">Entrar</button>
             </form>
 
-            <form action="php/registro_usuario_be.php" method="POST" class="formulario__register">
+            <form action="php/registro_usuario_be.php" method="post" class="formulario__register">
                 <h2>Resgistrarse</h2>
                 <input type="text" placeholder="Nombre Completo" name="nombre_completo">
                 <input type="text" placeholder="Correo Electronico" name="correo">

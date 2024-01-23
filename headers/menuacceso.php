@@ -88,7 +88,7 @@
 
     <section class="home">
     <nav>
-        <a class="home__nav" href="#">Registrate</a>
+        <a class="home__nav" href="index.php">Registrate</a>
         <a class="home__nav" href="#">¿Quieres saber más?</a>
         <a class="home__nav" href="#">Aprende a Aprender</a>
     </nav>

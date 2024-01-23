@@ -14,6 +14,8 @@
     --primary-color-light:#9B27B00D;
     --toogle-color:#DDDDDD;
     --text-color:#707070;
+    --loginbox-color:rgba(0, 128, 255, 0.5);
+    --secondarybox-color:#46A2FD;
 
     --tran-03: all 0.2s ease;
     --tran-04: all 0.3s ease;
@@ -37,6 +39,12 @@ body.dark {
     --primary-color-light: #3A3B3C;
     --toggle-color:#FFFFFF;
     --text-color: #CCCCCC;
+}
+
+.home .home__nav {
+    color: var(--text-color);
+    align-items: center;
+    justify-content: center;
 }
 
 .sidebar {
@@ -134,7 +142,7 @@ body.dark {
     right: 0px;
     height: 35px;
     width: 35px;
-    background-color: var(--primary-color);
+    background-color: var(--loginbox-color);
     color: var(--sidebar-color);
     display: flex;
     align-items: center;
@@ -191,7 +199,7 @@ body.dark .sidebar header .toogle {
 }
 
 .sidebar li a:hover {
-    background-color: var(--primary-color);
+    background-color: var(--loginbox-color);
 }
 
 .sidebar li a:hover .icon,
@@ -331,7 +339,7 @@ body.dark .home .text {
 .box_footer{
     display: flex;
     flex-direction: column;
-    padding: 40px;
+    padding: 20px;
 
 }
  .box_footer .logo img{
@@ -342,20 +350,21 @@ body.dark .home .text {
     max-width: 350px;
     margin-top: 20px;
     font-weight: 500;
-    color: #7a7a7a;
+    color: var(--text-color);
     font-size: 18px;
  }
 
  .box_footer .h2{
     margin-bottom: 30px;
-    color: #343434;
+    color: var(--text-color);
     font-weight: 700;
  }
 
 .box_footer a{
     margin-top: 10px;
-    color: #7a7a7a;
+    color: var(--text-color);
     font-weight: 600;
+    text-decoration: none;
 }
 
  .box_footer a:hover{
@@ -366,22 +375,22 @@ body.dark .home .text {
     font-size: 20px;
  }
 
- .box_copyright{
+ .box__copyright{
     max-width: 1200px;
     margin: auto;
     text-align: center;
     padding: 0px 40px;
  }
 
- .box_copyright p{
+ .box__copyright p{
     margin-top: 20px;
-    color: #7a7a7a;
+    color: var(--text-color);
  }
 
- .box_copyright hr{
+ .box__copyright hr{
     border: none;
     height: 1px;
-    background-color: #7a7a7a;
+    background-color: var(--text-color);
  }
  .home__nav {
     text-decoration: none;
