@@ -1,14 +1,19 @@
 <?php 
 
+session_start();
+
 include 'conexion_be.php';
 
 $correo = $_POST['correo'];
-$contraseña = $_POST['contraseña'];
+$contrasena = $_POST['contrasena'];
+$contrasena = hash('sha512', $contrasena);
 
-$validar_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo' and contraseña='$contraseña'");
+$validar_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo'
+and contrasena='$contrasena' ");
 
-if(mysqli_num_rows($validar_login) > 0);{
-    header("location: ../bienvenido.php");   
+if(mysqli_num_rows($validar_login) > 0){
+    header("LOCATION: ../bienvenido.php");
+    exit;
 }
 
 ?>
