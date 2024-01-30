@@ -15,16 +15,30 @@
         <h2>Suscripción</h2>
         <h2>Ayuda con tu cuenta</h2>
     </section>
-    <section class="formulario">
-        <form action="php/quejas.php" method="POST">
-            <label>Nombre:</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu Nombre">
-            <label>Apellidos:</label>
-            <input type="text" name="apellidos" id="apellidos" placeholder="Ingresa tus Apellidos">
-            <label>Núm de Estudiante:</label>
-            <input type="number" name="estudiante" id="n-estudiante" placeholder="Ingresa Núm de Estudiante">
-            <label>Deja tu comentario:</label>
-            <textarea name="comentario" id="comen" placeholder="Deja tu comentario"></textarea>
+    <section>
+        <h3>Formulario de Aclaraciones</h3>
+        <form  class="formulario" action="php/quejas.php" method="POST">
+            <fieldset>
+                <div class="campo">
+                    <label>Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu Nombre">
+                </div>    
+                <div class="camp"> 
+                    <label>Apellidos:</label>
+                        <input type="text" name="apellidos" id="apellidos" placeholder="Ingresa tus Apellidos">
+                </div>
+                <div class="campo">
+                    <label>Núm de Estudiante:</label>
+                        <input type="tel" name="estudiante" id="n-estudiante" placeholder="Núm de Estudiante">
+                </div>
+                <div class="campo">    
+                    <label>Deja tu comentario:</label>
+                        <textarea name="comentario" id="comen" placeholder="Deja tu comentario"></textarea>
+                </div>       
+                <div class="campo">
+                        <input class="" type="submit" value="Enviar"> 
+                </div>
+            </fieldset>
         </form>
     </section>
 
