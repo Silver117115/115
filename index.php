@@ -1,4 +1,6 @@
 <?php 
+require_once="./config/app.php";
+require_once="./load.php";
 session_start();
 if (isset($_SESSION['usuario'])){
     header("location: bienvenido.php");
