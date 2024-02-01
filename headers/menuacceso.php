@@ -96,7 +96,9 @@
             Dashboard
         </div>
         <section>
-        <p>Prueba Body</p>
+        <h2>Aprende más... Prácticando más</h2>
+        <h3>Preparación desde Secundaria hasta una Especialización</h3>
+        
         </section>
     
         <?php include "footer/footer.php"; ?>
