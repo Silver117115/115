@@ -24,6 +24,6 @@ if(isset($_SESSION['usuario'])){
 <?php include "headers/menuacceso.php"; ?>
 
 <body id="body">
-    
+
 </body>
 </html>

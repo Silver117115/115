@@ -95,6 +95,10 @@
         <div class="text">
             Dashboard
         </div>
+        <section>
+        <p>Prueba Body</p>
+        </section>
+    
         <?php include "footer/footer.php"; ?>
     </section>
     <script src="scripts\scripts_index-2.js"></script>
