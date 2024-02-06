@@ -1,7 +1,8 @@
 <?php 
-require_once="./config/app.php";
-require_once="./load.php";
+
 session_start();
+
+
 if (isset($_SESSION['usuario'])){
     header("location: bienvenido.php");
 }
@@ -39,8 +40,8 @@ if (isset($_SESSION['usuario'])){
 
             <form action="php/login.php" method="post" class="formulario__login">
                 <h2>Iniciar Sesion</h2>
-                <input type="text" placeholder="Correo Electronico" name="correo">
-                <input type="password" placeholder="Contraseña" name="contasena">
+                <input type="text" placeholder="Correo Electronico" name="correo" id="correo">
+                <input type="password" placeholder="Contraseña" name="contasena" id="contrasena">
                 <button class="btningresar">Entrar</button>
             </form>
 

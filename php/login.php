@@ -2,18 +2,32 @@
 
 session_start();
 
-include 'conexion_be.php';
+if($_POST){
+    include './conexion_be.php';
 
-$correo = $_POST['correo'];
-$contrasena = $_POST['contrasena'];
-$contrasena = hash('sha512', $contrasena);
+    $correo = (isset($_POST['correo']))?$_POST['correo']:"";
+    $contrasena = (isset($_POST['contrasena']))?$_POST['contrasena']:"";
+    $contrasena = hash('sha512', $contrasena);
 
-$validar_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo'
-and contrasena='$contrasena' ");
+    $sentencia=$conexion->prepare("SELECT *, count(*) as n_usuario 
+                FROM `usuarios`
+                WHERE correo=:correo
+                AND contrasena=:contrasena
+                ");
+    $sentencia->bindParam(":correo",$correo);
+    $sentencia->bindParam(":contrasena",$contrasena);
+    $sentencia->execute();
+    print_r($sentencia);
 
-if(mysqli_num_rows($validar_login) > 0){
-    header("LOCATION: ../bienvenido.php");
-    exit;
+    $lista_usuarios=$sentencia->fetch(PDO::FETCH_LAZY);
+
+    if($lista_usuarios['n_usuario']>0){
+        $_SESSION['usuario']=$lista_usuarios['usuario'];
+        $_SESSION['logueado']=true;
+        header("Location:./binevenido.php");
+    }else{
+        $mensaje="Error:El usuario o contraseña son incorrectos";
+    }
 }
 
 ?>
