@@ -29,26 +29,27 @@ if(isset($_SESSION['usuario'])){
         <h3>Preparación Básica hasta una Especialización</h3>
         <h2>Más Demandados</h2>
 </section>
-
-<div class="container">
-    <div class="card">
-        <img src="img/secundaria.jpg" alt="secundaria">
-        <h4>Educacion Basica</h4>
-        <p>En esta seccion tenemos como vision dar apoyo a los jiovenes y facilitarles su aprendizaje en materias complicadas</p>
+<div class="cont-flex"> 
+    <div class="container">
+        <div class="card">
+            <img src="img/secundaria.jpg" alt="secundaria" width="400px">
+            <h4>Educacion Basica</h4>
+            <p>En esta seccion tenemos como vision dar apoyo a los jiovenes y facilitarles su aprendizaje en materias complicadas</p>
+        </div>
     </div>
-</div>
-<div class="container">
-    <div class="card">
-        <img src="img/bachillerato.jpg" alt="bachillerato">
-        <h4>Educacion Media</h4>
-        <p>En esta seccion tenemos como vision dar induccion a los jovenes para que puedan desarrollar una carrera tecnica</p>
+    <div class="container ">
+        <div class="card">
+            <img src="img/bachillerato.jpg" alt="bachillerato" width="400px">
+            <h4>Educacion Media</h4>
+            <p>En esta seccion tenemos como vision dar induccion a los jovenes para que puedan desarrollar una carrera tecnica</p>
+        </div>
     </div>
-</div>
-<div class="container">
-    <div class="card">
-        <img src="img/universidad.jpg" alt="universidad">
-        <h4>Educacion basica</h4>
-        <p>En esta seccion tenemos como vision dar apoyo a los jovenes y facilitarles su aprendizaje en materias complicadas</p>
+    <div class="container ">
+        <div class="card">
+            <img src="img/universidad.jpg" alt="universidad" width="400px">
+            <h4>Educacion Superior</h4>
+            <p>En esta seccion tenemos como visión dar apoyo a los jovenes y facilitarles su aprendizaje en materias complicadas</p>
+        </div>
     </div>
 </div>
        
