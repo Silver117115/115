@@ -40,8 +40,8 @@ if (isset($_SESSION['usuario'])){
 
             <form action="php/login.php" method="post" class="formulario__login">
                 <h2>Iniciar Sesion</h2>
-                <input type="text" placeholder="Correo Electronico" name="correo" id="correo">
-                <input type="password" placeholder="Contraseña" name="contasena" id="contrasena">
+                <input type="text" placeholder="Correo Electronico" name="correo" id="email">
+                <input type="password" placeholder="Contraseña" name="contrasena" id="pwd">
                 <button class="btningresar">Entrar</button>
             </form>
 

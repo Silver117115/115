@@ -21,7 +21,7 @@
             <h2>Soluciones</h2>
             <a href="#">¿Problemas con tus cursos?</a>
             <a href="#">Consultas</a>
-            <a href="#">Aclaraciones</a>
+            <a href="modules\quejas.php">Comentarios o quejas.</a>
             <a href="#">¿Problemas con tu pago?</a>
         </div>
         <div class="box_footer">
