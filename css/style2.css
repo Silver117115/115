@@ -396,7 +396,7 @@ body.dark .home .text {
  }
 
  /* Main Content */
- .cont-flex{
+ .cont-flex {
     display: flex;
     flex-wrap: nowrap;
      justify-content: space-between;
