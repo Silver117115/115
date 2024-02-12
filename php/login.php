@@ -9,24 +9,21 @@ if($_POST){
     echo "correo:". $correo;
     $contrasena = (isset($_POST['contrasena']))?$_POST['contrasena']:"";
     echo "contrasena". $contrasena; 
-    $contrasena = hash('sha512', $contrasena);
-
-    $sentencia=$conexion->prepare("SELECT count(*) as n_usuario 
-                FROM `usuarios`
-                WHERE correo = '$correo'
-                AND contrasena = '$contrasena'
-                ");
-    $sentencia->execute();
+  //  $contrasena = hash('sha512', $contrasena);
+    $query = "
+    SELECT count(*)
+    FROM usuarios
+    WHERE usuario = ?
+    AND contrasena = ?
+";
+$resultado=$conexion->prepare($query);
+$resultado->bind_param('ss',$user,$pass);
+$resultado->execute();
+$resultado->bind_result($idUsuario);
+if($resultado->fetch())
+    echo 'Ingreso exitoso';
+else echo 'Datos incorrectos';
    
-    $lista_usuarios=$sentencia->fetch(PDO::FETCH_ASSOC);
-
-    if($lista_usuarios['n_usuario']>0){
-        $_SESSION['usuario']=$lista_usuarios['usuario'];
-        $_SESSION['logueado']=true;
-        header("Location:./binevenido.php");
-    }else{
-        $mensaje="Error:El usuario o contraseña son incorrectos";
-    }
 }
 
 ?>
