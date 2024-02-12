@@ -21,3 +21,14 @@ modeSwitch.addEventListener("click", () =>{
         modeText.innerText = "Modo oscuro"
     }
 })
+
+ document.getElementById("complaintsForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    let formData = new FormData(this);
+        
+    // Simulate sending the data (replace this with actual backend code)
+    setTimeout(function() {
+        alert("Sus comentarios fueron recibidos");
+        document.getElementById("complaintsForm").reset();
+    }, 1000);
+});

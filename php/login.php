@@ -5,24 +5,25 @@ session_start();
 if($_POST){
     include './conexion_be.php';
 
-    $correo = (isset($_POST['correo']))?$_POST['correo']:"";
-    echo "correo:". $correo;
-    $contrasena = (isset($_POST['contrasena']))?$_POST['contrasena']:"";
-    echo "contrasena". $contrasena; 
-  //  $contrasena = hash('sha512', $contrasena);
+    $correo = (isset($_POST['correo'])) ? $_POST['correo'] : "";
+    $contrasena = (isset($_POST['contrasena'])) ? $_POST['contrasena'] : "";
+    $contrasena = hash('sha512', $contrasena);
     $query = "
-    SELECT count(*)
+    SELECT id
     FROM usuarios
-    WHERE usuario = ?
+    WHERE correo = ?
     AND contrasena = ?
 ";
-$resultado=$conexion->prepare($query);
-$resultado->bind_param('ss',$user,$pass);
-$resultado->execute();
-$resultado->bind_result($idUsuario);
-if($resultado->fetch())
-    echo 'Ingreso exitoso';
-else echo 'Datos incorrectos';
+    $resultado = $conexion->prepare($query);
+    $resultado->bind_param('ss', $correo, $contrasena);
+    $resultado->execute();
+    $resultado->store_result();
+
+    if($resultado->num_rows > 0) {
+        header("Location: ../bienvenido.php");
+    } else {
+        echo 'Datos incorrectos';
+    }
    
 }
 

@@ -116,12 +116,14 @@ body.dark {
     margin-top: 2px;
     font-size: 18px;
     font-weight: 600;
+    color: #18191A;
 }
 
 .profe {
     font-size: 16px;
     margin-top: -2px;
     display: block;
+    color: #18191A;
 }
 
 .sidebar header .image {
@@ -348,6 +350,10 @@ body.dark .home .text {
  .box_footer .logo img{
     width: 180px;
  }
+ 
+ body.dark h2{
+    color: #fff;
+ }
 
  .box_footer .terms{
     max-width: 350px;
@@ -447,17 +453,25 @@ body.dark .home .text {
  
  /* Quejas */
  .complaints-section {
-    background-color: #007bff;
+    background-color: #46A2FD;
     color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
+    margin-top: 70px;
     max-width: 500px;
 }
+
+body.dark .complaints-section {
+    background-color: #333;
+    color: #fff;
+}
+
 .complaints-section h2 {
     margin-top: 0;
 }
+
 .complaints-form input[type="text"],
 .complaints-form textarea {
     width: 100%;
@@ -466,21 +480,43 @@ body.dark .home .text {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    color: #333; /* Color de texto en modo claro */
+    background-color: #fff; /* Color de fondo en modo claro */
 }
+
+body.dark .complaints-form input[type="text"],
+body.dark .complaints-form textarea {
+    color: #fff; /* Color de texto en modo oscuro */
+    background-color: #333; /* Color de fondo en modo oscuro */
+}
+
 .complaints-form textarea {
     height: 100px;
 }
+
 .complaints-form input[type="submit"] {
     background-color: #ffffff;
-    color: #007bff;
-    border: 2px solid #007bff;
+    color: #46A2FD;
+    border: 2px solid #46A2FD;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
 }
+
 .complaints-form input[type="submit"]:hover {
-    background-color: #007bff;
+    background-color: #46A2FD;
     color: #ffffff;
+}
+
+body.dark .complaints-form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+body.dark .complaints-form input[type="submit"]:hover {
+    background-color: #fff;
+    color: #333;
 }
  
