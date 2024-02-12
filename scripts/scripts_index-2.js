@@ -16,8 +16,8 @@ searchBtn.addEventListener("click", () => {
 modeSwitch.addEventListener("click", () =>{
     body.classList.toggle("dark");
     if (body.classList.contains("dark")) {
-        modeText.innerText = "Ligth mode"
+        modeText.innerText = "Modo claro"
     } else {
-        modeText.innerText = "Dark mode"
+        modeText.innerText = "Modo oscuro"
     }
 })

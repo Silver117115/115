@@ -19,7 +19,7 @@ if(isset($_SESSION['usuario'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yo no lo hago por que yo ya lo tengo: Cursos y más</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css\style2.css">
 </head>
 <?php include "headers/menuacceso.php"; ?>
 
@@ -29,26 +29,29 @@ if(isset($_SESSION['usuario'])){
         <h3>Preparación Básica hasta una Especialización</h3>
         <h2>Más Demandados</h2>
 </section>
-        <section class="container">
-        <article class="post">
-            <h4>Título de mi post</h4>
-            <p>Descripción de mi post</p>
-            <img class="img-curso" src="img/secundaria.jpg" alt="cursosecundaria" width="200px">
-            <p>Texto del artículo e información</p>
-        </article>
-        <article class="post">
-            <h4>Título de mi post 2</h4>
-            <p>Descripción de mi post 2</p>
-            <img class="img-curso" src="img/bachillerato.jpg" alt="cursobachillerato" width="200px">
-            <p>Texto del artículo e información</p>
-        </article>
-        <article class="post">
-            <h4>Título de mi post 3</h4>
-            <p>Descripción de mi post 3</p>
-            <img class="img-curso" src="img/universidad.jpg" alt="cursouniversidad" width="200px">
-            <p>Texto del artículo e información</p>
-        </article>
-        </section>
+
+<div class="container">
+    <div class="card">
+        <img src="img/secundaria.jpg" alt="secundaria">
+        <h4>Educacion Basica</h4>
+        <p>En esta seccion tenemos como vision dar apoyo a los jiovenes y facilitarles su aprendizaje en materias complicadas</p>
+    </div>
+</div>
+<div class="container">
+    <div class="card">
+        <img src="img/bachillerato.jpg" alt="bachillerato">
+        <h4>Educacion Media</h4>
+        <p>En esta seccion tenemos como vision dar induccion a los jovenes para que puedan desarrollar una carrera tecnica</p>
+    </div>
+</div>
+<div class="container">
+    <div class="card">
+        <img src="img/universidad.jpg" alt="universidad">
+        <h4>Educacion basica</h4>
+        <p>En esta seccion tenemos como vision dar apoyo a los jovenes y facilitarles su aprendizaje en materias complicadas</p>
+    </div>
+</div>
+       
         <aside>
             <h4>Categorías</h4>
             <div>
