@@ -53,7 +53,7 @@ if(isset($_SESSION['usuario'])){
     </div>
 </div>
        
-        <aside>
+        <aside><br>
             <h4>Categorías</h4>
             <div>
                 <h4>Tecnología</h4>
