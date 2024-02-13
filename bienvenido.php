@@ -1,14 +1,14 @@
-<?php 
+<?php
 session_start();
-if(isset($_SESSION['usuario'])){
+
+if (!isset($_SESSION['id_usuario'])) {
     echo '
     <script>
-    alert("Por favor debes iniciar sesion");
+    alert("Por favor, completa todos los campos del formulario.");
     window.location = "index.php";
     </script>
     ';
-    session_destroy();
-    die();
+    exit();
 }
 ?>
 <!DOCTYPE html>
@@ -24,7 +24,7 @@ if(isset($_SESSION['usuario'])){
 <?php include "headers/menuacceso.php"; ?>
 
 <body>
-<section>
+<section class="titulos">
         <h2>Aprende más... Prácticando más</h2>
         <h3>Preparación Básica hasta una Especialización</h3>
         <h2>Más Demandados</h2>

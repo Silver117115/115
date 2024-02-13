@@ -33,7 +33,7 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="modules\estadistica.php">
                             <i class="bx bx-bar-chart-alt-2 icon"></i>
                             <span class="text nav-text">Estadístca</span>
                         </a>
@@ -88,7 +88,7 @@
 
     <section class="home">
     <nav>
-        <a class="home__nav" href="index.php">Registrate</a>
+        <a class="home__nav" href="../index.php">Registrate</a>
         <a class="home__nav" href="#">¿Quieres saber más?</a>
         <a class="home__nav" href="#">Aprende a Aprender</a>
     </nav>
