@@ -70,7 +70,7 @@
                         <i class="bx bx-log-out icon"></i>
                         <span class="text nav-text">Salir</span>
                     </a>
-                </li>
+                </li>   
                 <li class="mode">
                     <div class="sun-moon">
                         <i class="bx bx-moon icon moon"></i>
