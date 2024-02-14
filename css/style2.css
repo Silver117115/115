@@ -467,9 +467,50 @@ body.dark .home .text {
     font-weight: 300;
  } 
 
- 
- /* Quejas */
- .complaints-section {
+ body.dark .card{
+    background-color: #333333; 
+}
+body.dark .card {
+    background-color: #666666; 
+}
+body.dark h4, body.dark p {
+    color: #ffffff;
+}
+
+body.dark .container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px #ffffff;
+} 
+/* Scroll bar */
+::-webkit-scrollbar {
+    width: 10px; }
+
+::-webkit-scrollbar-track {
+    background-color: transparent;}
+
+    ::-webkit-scrollbar-thumb {
+    background-color: #666666; 
+    border-radius: 5px; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #888888; 
+}
+
+body.dark ::-webkit-scrollbar-track {
+    background-color: #333333; /* Cambia el color de fondo de la barra de desplazamiento en modo oscuro */
+}
+
+/* Thumb (parte deslizable de la barra de desplazamiento) */
+body.dark ::-webkit-scrollbar-thumb {
+    background-color: #666666; /* Color de la parte deslizable de la barra de desplazamiento en modo oscuro */
+    border-radius: 5px; /* Radio de borde de la parte deslizable de la barra de desplazamiento */
+}
+
+body.dark ::-webkit-scrollbar-thumb:hover {
+    background-color: #888888; 
+}
+/* Quejas */
+.complaints-section {
     background-color: #46A2FD;
     color: #ffffff;
     padding: 20px;
