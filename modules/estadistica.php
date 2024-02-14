@@ -10,7 +10,6 @@
 </head>
 <?php include "../headers/menuacceso.php"; ?>
 <body>
-<canvas id="myChart"></canvas>
     
 <script src="../scripts/scripts_index-2.js"></script>
 <?php include "../footer/footer.php"; ?>

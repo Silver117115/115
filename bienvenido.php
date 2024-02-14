@@ -4,7 +4,7 @@ session_start();
 if (!isset($_SESSION['id_usuario'])) {
     echo '
     <script>
-    alert("Por favor, completa todos los campos del formulario.");
+    alert("Por favor, inicia sesion.");
     window.location = "index.php";
     </script>
     ';
