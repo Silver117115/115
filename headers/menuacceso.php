@@ -33,7 +33,7 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="modules\estadistica.php">
                             <i class="bx bx-bar-chart-alt-2 icon"></i>
                             <span class="text nav-text">Estadístca</span>
                         </a>

@@ -41,6 +41,10 @@ body.dark {
     --text-color: #CCCCCC;
 }
 
+body.dark .titulos h3{
+    color: #fff;
+ }
+
 .home .home__nav {
     color: var(--text-color);
     align-items: center;
@@ -125,6 +129,13 @@ body.dark {
     display: block;
     color: #18191A;
 }
+
+
+body.dark .name, 
+body.dark .profe {
+    color: #fff; 
+}
+
 
 .sidebar header .image {
     display: flex;
@@ -231,6 +242,8 @@ body.dark li a:hover .text {
     position: relative;
     transition: var(--tran-05);
 }
+
+
 
 .menu-bar .mode .sun-moon {
     height: 50px;
@@ -354,6 +367,8 @@ body.dark .home .text {
  body.dark h2{
     color: #fff;
  }
+
+ 
 
  .box_footer .terms{
     max-width: 350px;

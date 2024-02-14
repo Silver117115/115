@@ -2,6 +2,12 @@
 
 session_start();
 
+
+if(isset($_SESSION['id_usuario'])) {
+    header("Location: ../bienvenido.php");
+    exit;
+}
+
 if($_POST){
     include './conexion_be.php';
 
@@ -20,11 +26,12 @@ if($_POST){
     $resultado->store_result();
 
     if($resultado->num_rows > 0) {
+        $_SESSION['id_usuario'] = $resultado->id;
         header("Location: ../bienvenido.php");
+        exit;
     } else {
-        echo 'Datos incorrectos';
+        echo "<script>alert('Por favor verifique los datos ingresados'); window.location.href = '../index.php';</script>";
+        exit;
     }
-   
 }
-
 ?>
