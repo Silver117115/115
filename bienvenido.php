@@ -31,21 +31,42 @@ if(isset($_SESSION['usuario'])){
 </section>
 <div class="cont-flex"> 
     <div class="container">
-        <div class="card">
+        <div class="card card-1">
             <img src="img/secundaria.jpg" alt="secundaria" >
             <h4>Educacion Basica</h4>
             <p>En esta seccion tenemos como vision dar apoyo a los jiovenes y facilitarles su aprendizaje en materias complicadas</p>
         </div>
     </div>
-    <div class="container ">
-        <div class="card">
+    <div class="container">
+        <div class="card card-2">
             <img src="img/bachillerato.jpg" alt="bachillerato" >
             <h4>Educacion Media</h4>
             <p>En esta seccion tenemos como vision dar induccion a los jovenes para que puedan desarrollar una carrera tecnica</p>
         </div>
     </div>
-    <div class="container ">
-        <div class="card">
+    <div class="container">
+        <div class="card card-3">
+            <img src="img/universidad.jpg" alt="universidad" >
+            <h4>Educacion Superior</h4>
+            <p>En esta seccion tenemos como visión dar apoyo a los jovenes y facilitarles su aprendizaje en materias complicadas</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card card-4">
+            <img src="img/secundaria.jpg" alt="secundaria" >
+            <h4>Educacion Basica</h4>
+            <p>En esta seccion tenemos como vision dar apoyo a los jiovenes y facilitarles su aprendizaje en materias complicadas</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card card-5">
+            <img src="img/bachillerato.jpg" alt="bachillerato" >
+            <h4>Educacion Media</h4>
+            <p>En esta seccion tenemos como vision dar induccion a los jovenes para que puedan desarrollar una carrera tecnica</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card card-6">
             <img src="img/universidad.jpg" alt="universidad" >
             <h4>Educacion Superior</h4>
             <p>En esta seccion tenemos como visión dar apoyo a los jovenes y facilitarles su aprendizaje en materias complicadas</p>
