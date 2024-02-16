@@ -13,14 +13,14 @@ if($_POST){
 
     $tmp_imagen=$_FILES["imagen"]["tmp_name"];
     if($tmp_imagen!=""){
-        move_uploaded_file($tmp_imagen,"../../../assets\img\main_content/".$nombre_archivo_imagen );
+        move_uploaded_file($tmp_imagen,"../../../assets/img/about/".$nombre_archivo_imagen );
     }
 
 
     $sentencia=$conexion->prepare("INSERT INTO `tbl_entradas` 
     (`ID`, `imagen`, `titulo`, `descripcion`)
     VALUES (NULL, :imagen, :titulo, :descripcion);");
-    
+
     $sentencia->bindParam(":imagen",$nombre_archivo_imagen);
     $sentencia->bindParam(":titulo",$titulo);
     $sentencia->bindParam(":descripcion",$descripcion);

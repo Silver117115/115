@@ -1,29 +1,31 @@
 <?php 
 include("../../bd.php");
 
-if(isset($_GET['txtID'])) {
-    $txtID = $_GET['txtID'];
+if(isset($_GET['txtID'])){
+    
+    $txtID=(isset($_GET['txtID']) )?$_GET['txtID']:"";
 
-    $sentencia = $conexion->prepare("SELECT imagen FROM tbl_entradas WHERE id=:id");
-    $sentencia->bindParam(":id", $txtID);
+    $sentencia=$conexion->prepare("SELECT imagen FROM tbl_entradas WHERE id=:id");
+    $sentencia->bindParam(":id",$txtID);
     $sentencia->execute();
-    $registro_imagen = $sentencia->fetch(PDO::FETCH_ASSOC);
+    $registro_imagen=$sentencia->fetch(PDO::FETCH_LAZY);
 
-    if(isset($registro_imagen["imagen"]) && !empty($registro_imagen["imagen"])) {
-        $imagen_path = "../../../assets/img/main_content/" . $registro_imagen["imagen"];
-        if(file_exists($imagen_path)) {
-            unlink($imagen_path);
+    if(isset($registro_imagen["imagen"])){
+        if(file_exists("../../../assets/img/about/".$registro_imagen["imagen"])){
+            unlink("../../../assets/img/about/".$registro_imagen["imagen"]);
         }
     }
-
-    $sentencia = $conexion->prepare("DELETE FROM tbl_entradas WHERE id=:id");
-    $sentencia->bindParam(":id", $txtID);
+   
+    $sentencia=$conexion->prepare("DELETE FROM tbl_entradas WHERE id=:id");
+    $sentencia->bindParam(":id",$txtID);
     $sentencia->execute();
+
+
 }
 
-$sentencia=$conexion->prepare("SELECT * FROM `tbl_entradas`");
+$sentencia = $conexion->prepare("SELECT * FROM `tbl_entradas`");
 $sentencia->execute(); 
-$lista_entradas=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+$lista_entradas = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 include("../../templates/header.php");
 ?>
 
@@ -50,7 +52,7 @@ include("../../templates/header.php");
                 <tr class="">
                     <td><?php echo $registros['ID'];?></td>
                     <td>
-                    <img width="50" src="../../../assets/img/main_content/<?php echo $registros['imagen'];?>" />
+                    <img width="50" src="../../assets/img/about/"<?php echo $registros['imagen'];?>" />
                     </td>
                     <td><?php echo $registros['titulo'];?></td>
                     <td><?php echo $registros['descripcion'];?></td>
