@@ -3,11 +3,10 @@ include("../../bd.php");
 
 if($_POST){
 
-    $fecha=(isset($_POST['fecha']))?$_POST['fecha']:"";
+    $imagen=(isset($_FILES["imagen"]["name"]))?$_FILES["imagen"]["name"]:"";
     $titulo=(isset($_POST['titulo']))?$_POST['titulo']:"";
     $descripcion=(isset($_POST['descripcion']))?$_POST['descripcion']:"";
     
-
     $fecha_imagen=new DateTime();
     $nombre_archivo_imagen=($imagen!="")? $fecha_imagen->getTimestamp()."_".$imagen:"";
 
@@ -15,7 +14,6 @@ if($_POST){
     if($tmp_imagen!=""){
         move_uploaded_file($tmp_imagen,"../../../assets/img/about/".$nombre_archivo_imagen );
     }
-
 
     $sentencia=$conexion->prepare("INSERT INTO `tbl_entradas` 
     (`ID`, `imagen`, `titulo`, `descripcion`)

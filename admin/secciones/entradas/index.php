@@ -52,7 +52,7 @@ include("../../templates/header.php");
                 <tr class="">
                     <td><?php echo $registros['ID'];?></td>
                     <td>
-                    <img width="50" src="../../assets/img/about/"<?php echo $registros['imagen'];?>" />
+                    <img  width="50" src="../../../assets/img/about/<?php echo $registros['imagen'];?>" /
                     </td>
                     <td><?php echo $registros['titulo'];?></td>
                     <td><?php echo $registros['descripcion'];?></td>

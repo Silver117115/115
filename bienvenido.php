@@ -1,15 +1,12 @@
 <?php
+include ("admin/bd.php");
 session_start();
 
-if (!isset($_SESSION['id_usuario'])) {
-    echo '
-    <script>
-    alert("Por favor, inicia sesion.");
-    window.location = "index.php";
-    </script>
-    ';
-    exit();
-}
+
+
+$sentencia=$conexion->prepare("SELECT * FROM `tbl_entradas`");
+$sentencia->execute(); 
+$lista_entradas=$sentencia->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="es-es">
@@ -30,48 +27,16 @@ if (!isset($_SESSION['id_usuario'])) {
         <h2>Más Demandados</h2>
 </section>
 <div class="cont-flex"> 
+<?php foreach($lista_entradas as $registros){ ?>
     <div class="container">
         <div class="card card-1">
-            <img src="img/secundaria.jpg" alt="secundaria" >
-            <h4>Educacion Basica</h4>
-            <p>En esta seccion tenemos como vision dar apoyo a los jiovenes y facilitarles su aprendizaje en materias complicadas</p>
+            <img src="assets/img/about/<?php echo $registros["imagen"];?>" >
+            <h4><?php echo $registros['titulo'];?></h4>
+            <p><?php echo $registros['descripcion'];?></p>
         </div>
     </div>
-    <div class="container">
-        <div class="card card-2">
-            <img src="img/bachillerato.jpg" alt="bachillerato" >
-            <h4>Educacion Media</h4>
-            <p>En esta seccion tenemos como vision dar induccion a los jovenes para que puedan desarrollar una carrera tecnica</p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="card card-3">
-            <img src="img/universidad.jpg" alt="universidad" >
-            <h4>Educacion Superior</h4>
-            <p>En esta seccion tenemos como visión dar apoyo a los jovenes y facilitarles su aprendizaje en materias complicadas</p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="card card-4">
-            <img src="img/secundaria.jpg" alt="secundaria" >
-            <h4>Educacion Basica</h4>
-            <p>En esta seccion tenemos como vision dar apoyo a los jiovenes y facilitarles su aprendizaje en materias complicadas</p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="card card-5">
-            <img src="img/bachillerato.jpg" alt="bachillerato" >
-            <h4>Educacion Media</h4>
-            <p>En esta seccion tenemos como vision dar induccion a los jovenes para que puedan desarrollar una carrera tecnica</p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="card card-6">
-            <img src="img/universidad.jpg" alt="universidad" >
-            <h4>Educacion Superior</h4>
-            <p>En esta seccion tenemos como visión dar apoyo a los jovenes y facilitarles su aprendizaje en materias complicadas</p>
-        </div>
-    </div>
+    <?php }?>
+    
 </div>
        
         <aside><br>
