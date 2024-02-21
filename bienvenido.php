@@ -37,7 +37,7 @@ $lista_entradas=$sentencia->fetchAll(PDO::FETCH_ASSOC);
     </div>
     <?php }?>
     
-</div>
+    </div>
        
         <aside><br>
             <h4>Categorías</h4>
