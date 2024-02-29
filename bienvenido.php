@@ -2,6 +2,10 @@
 include ("admin/bd.php");
 session_start();
 
+if (isset($_SESSION['usuario'])) {
+    header("Location: ../index.php");
+    exit(); 
+}
 
 
 
@@ -49,7 +53,7 @@ $lista_entradas=$sentencia->fetchAll(PDO::FETCH_ASSOC);
     </div>
     <?php }?>
     
-    </div>
+</div>
        
         <aside><br>
             <h4>Categorías</h4>

@@ -9,33 +9,27 @@ if(isset($_SESSION['id_usuario'])) {
 if($_POST){
     include ("../admin/bd.php");
 
-    echo "Correo: " . $_POST['correo'] . "<br>";
-    echo "Contraseña: " . $_POST['contrasena'] . "<br>";
-
-    
-
     $correo = $_POST['correo'];
     $contrasena = $_POST['contrasena'];
     $contrasena = hash('sha512', $contrasena);
-    $query = "
-    SELECT id
-    FROM usuarios
-    WHERE correo = ?
-    AND contrasena = ?
-    
-";
 
-    $resultado = $conexion->prepare($query);
-    $resultado->bind_param('ss', $correo, $contrasena);
-    $resultado->execute();
-    $resultado->store_result();
+    // Preparar la consulta SQL con marcadores de posición
+    $query = "SELECT id FROM usuarios WHERE correo = :correo AND contrasena = :contrasena";
+    $statement = $conexion->prepare($query);
 
-    if($resultado->num_rows > 0) {
-        $resultado->bind_result($id_usuario);
-        $resultado->fetch();
+    // Vincular los parámetros con los valores proporcionados
+    $statement->bindParam(':correo', $correo);
+    $statement->bindParam(':contrasena', $contrasena);
 
+    // Ejecutar la consulta preparada
+    $statement->execute();
+
+    // Obtener el resultado
+    $resultado = $statement->fetch(PDO::FETCH_ASSOC);
+
+    if($resultado) {
         // Asignar el id de usuario a la sesión
-        $_SESSION['id_usuario'] = $id_usuario;
+        $_SESSION['id_usuario'] = $resultado['id'];
         header("Location: ../bienvenido.php");
         exit;
     } else {
