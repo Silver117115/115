@@ -10,7 +10,6 @@
 :root{
     --body-color:#9B27B00D;
     --sidebar-color:#FFFFFF;
-    --primary-color:#9C27B0;
     --primary-color-light:#9B27B00D;
     --toogle-color:#DDDDDD;
     --text-color:#707070;
@@ -315,6 +314,17 @@ body.dark .switch::before {
     transition: var(--tran-05);
 }
 
+.home .home__nav{
+    float: right;
+    padding: 10px;
+    background: hsl(210, 98%, 63%);
+    display: block;
+}
+
+.home .home__nav:hover{
+    color: white;
+}
+
 body.dark .home{
     background-color: #18191A;
 }
@@ -405,6 +415,25 @@ body.dark .home .text {
     text-align: center;
     padding: 0px 40px;
  }
+
+ .subir {
+    display: block;
+    padding: 10px;
+    width: 20%;
+    height: 35px;
+    align-items: center;
+    background-color: #46A2FD; 
+    text-decoration: none;
+}
+
+.subir i {
+    font-size: 20px;
+    color: white;
+}
+
+.subir:hover {
+    background-color: darkblue;
+}
 
  .box__copyright p{
     margin-top: 20px;

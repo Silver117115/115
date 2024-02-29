@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="es-es">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style2.css">
-    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Header</title>
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <script src="../scripts/scripts_index-2.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 </head>
 <body>
 
@@ -87,16 +92,9 @@
         </div>
     </nav>
 
-    <section class="home">
-    <nav>
-        <a class="home__nav" href="../index.php">Registrate</a>
-        <a class="home__nav" href="#">¿Quieres saber más?</a>
-        <a class="home__nav" href="#">Aprende a Aprender</a>
-    </nav>
-        <div class="text">
-            Dashboard
-        </div>
     
-    <script src="scripts\scripts_index-2.js"></script>
+
+    
+    
 </body>
 </html>

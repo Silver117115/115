@@ -1,15 +1,16 @@
 <?php 
-
-$servidor="localhost";
-$baseDeDatos="login_register_db";
-$usuario="root";
-$contrasenia="";
+$dsn = 'mysql:host=localhost;dbname=login_register_db';
+$usuario = 'root';
+$contraseña = '';
 
 try {
-    $conexion=new PDO("mysql:host=$servidor;dbname=$baseDeDatos",$usuario,$contrasenia);
+    $conexion = new PDO($dsn, $usuario, $contraseña);
     //echo "Conexion realizada...";
-} catch (Exception $error) {
-    echo $error->getMessage();
+} catch (PDOException $e) {
+    echo 'Error de conexión: ' . $e->getMessage();
+    exit;
 }
 
+
 ?>
+

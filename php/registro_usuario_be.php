@@ -1,12 +1,13 @@
-<?php 
+<?php
 
-include 'conexion_be.php';
+include("../admin/bd.php");
 
-$nombre_completo = mysqli_real_escape_string($conexion, $_POST['nombre_completo']);
-$correo = mysqli_real_escape_string($conexion, $_POST['correo']);
-$usuario = mysqli_real_escape_string($conexion, $_POST['usuario']);
-$contrasena = mysqli_real_escape_string($conexion, $_POST['contrasena']);
+$nombre_completo = $_POST['nombre_completo'];
+$correo = $_POST['correo'];
+$usuario = $_POST['usuario'];
+$contrasena = $_POST['contrasena'];
 
+// Verificar si los campos están vacíos
 if(empty($nombre_completo) || empty($correo) || empty($usuario) || empty($contrasena)) {
     echo '
     <script>
@@ -17,6 +18,7 @@ if(empty($nombre_completo) || empty($correo) || empty($usuario) || empty($contra
     exit();
 }
 
+// Validar el formato del correo electrónico
 if(!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
     echo '
     <script>
@@ -27,6 +29,7 @@ if(!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
     exit();
 }
 
+// Validar la fortaleza de la contraseña
 if(strlen($contrasena) < 8 || !preg_match('/[A-Z]/', $contrasena)) {
     echo '
     <script>
@@ -37,11 +40,15 @@ if(strlen($contrasena) < 8 || !preg_match('/[A-Z]/', $contrasena)) {
     exit();
 }
 
-$contrasena = hash('sha512', $contrasena);
+// Hash de la contraseña
+$contrasena_hash = hash('sha512', $contrasena);
 
-$verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo' ");
+// Verificar si el correo ya está en uso
+$verificar_correo = $conexion->prepare("SELECT * FROM usuarios WHERE correo = :correo");
+$verificar_correo->bindParam(':correo', $correo);
+$verificar_correo->execute();
 
-if(mysqli_num_rows($verificar_correo) > 0){
+if($verificar_correo->rowCount() > 0) {
     echo '
     <script>
     alert("Este correo ya está en uso, por favor intenta con otro.");
@@ -51,9 +58,12 @@ if(mysqli_num_rows($verificar_correo) > 0){
     exit();
 }
 
-$verificar_usuario = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario='$usuario' ");
+// Verificar si el usuario ya está en uso
+$verificar_usuario = $conexion->prepare("SELECT * FROM usuarios WHERE usuario = :usuario");
+$verificar_usuario->bindParam(':usuario', $usuario);
+$verificar_usuario->execute();
 
-if(mysqli_num_rows($verificar_usuario) > 0){
+if($verificar_usuario->rowCount() > 0) {
     echo '
     <script>
     alert("Este usuario ya está en uso, por favor intenta con otro.");
@@ -62,11 +72,15 @@ if(mysqli_num_rows($verificar_usuario) > 0){
     ';
     exit();
 }
-   
-$query = "INSERT INTO usuarios(nombre_completo, correo, usuario, contrasena) VALUES('$nombre_completo', '$correo', '$usuario', '$contrasena')";
-$ejecutar = mysqli_query($conexion, $query);
 
-if($ejecutar){
+// Insertar usuario en la base de datos
+$insertar_usuario = $conexion->prepare("INSERT INTO usuarios(nombre_completo, correo, usuario, contrasena) VALUES(:nombre_completo, :correo, :usuario, :contrasena)");
+$insertar_usuario->bindParam(':nombre_completo', $nombre_completo);
+$insertar_usuario->bindParam(':correo', $correo);
+$insertar_usuario->bindParam(':usuario', $usuario);
+$insertar_usuario->bindParam(':contrasena', $contrasena_hash);
+
+if($insertar_usuario->execute()) {
     echo '
     <script>
     alert("Usuario almacenado exitosamente.");
@@ -81,7 +95,5 @@ if($ejecutar){
     </script>
     ';
 }
-
-mysqli_close($conexion);
 
 ?>

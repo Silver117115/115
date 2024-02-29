@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    
+</head>
 </head>
 <body>
 <footer>
@@ -36,13 +42,19 @@
             <a href="#"><i class='bx bxl-facebook-circle'></i>Facebook</a>
             <a href="#"><i class='bx bxl-twitter' ></i>Twitter</a>
             <a href="#"><i class='bx bxl-instagram' ></i>Instagram</a>
+            <a href="#" class="subir">
+    <i class="bx bx-up-arrow-alt"></i>
+    </a>
         </div>
     </div>
 
     <div class="box__copyright">
         <hr>
-        <p>Todos los derechos reservados © 2024 <b>Soluciones Tecnicas</b></p>
+        <p>Todos los derechos reservados &copy 2024 <b>Soluciones Tecnicas</b></p>
+        
     </div>
+    <script src="../scripts/scripts_index-2.js"></script>
+    
 
 </footer>
 </body>

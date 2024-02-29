@@ -1,10 +1,12 @@
 <?php 
 
 session_start();
+include ("admin/bd.php");
 
 if (isset($_SESSION['usuario'])){
     header("location: bienvenido.php");
 }
+
 
 ?>
 
@@ -38,12 +40,12 @@ if (isset($_SESSION['usuario'])){
 
         <div class="contenedor__login-register">
 
-            <form action="php/login.php" method="post" class="formulario__login">
-                <h2>Iniciar Sesion</h2>
-                <input type="text" placeholder="Correo Electronico" name="correo" id="email">
-                <input type="password" placeholder="Contraseña" name="contrasena" id="pwd">
-                <button class="btningresar">Entrar</button>
-            </form>
+        <form action="php/login.php" method="post" class="formulario__login">
+        <h2>Iniciar Sesion</h2>
+        <input type="text" placeholder="Correo Electronico" name="correo" id="email">
+        <input type="password" placeholder="Contraseña" name="contrasena" id="pwd">
+        <button class="btningresar">Entrar</button>
+        </form>
 
             <form action="php/registro_usuario_be.php" method="post" class="formulario__register">
                 <h2>Resgistrarse</h2>
