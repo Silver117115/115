@@ -42,6 +42,7 @@ $lista_entradas=$sentencia->fetchAll(PDO::FETCH_ASSOC);
         <div class="text">
             Dashboard
         </div>
+</sectio>        
 <div class="cont-flex"> 
 <?php foreach($lista_entradas as $registros){ ?>
     <div class="container">
@@ -54,6 +55,7 @@ $lista_entradas=$sentencia->fetchAll(PDO::FETCH_ASSOC);
     <?php }?>
     
 </div>
+
        
         <aside><br>
             <h4>Categorías</h4>
